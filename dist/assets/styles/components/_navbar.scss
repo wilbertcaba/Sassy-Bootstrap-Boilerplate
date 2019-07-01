@@ -1,3 +1,169 @@
+//---------------------------------------------------------
+// Mobile 
+@include media-breakpoint-down(md){
+    .wsmobileheader {
+        background-color: $gray-700;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 54px;
+        
+        .smllogo {
+            margin: 0;
+        
+            img {
+                width: 100px;
+                margin: 0;
+            }
+        }
+
+        .callusbtn {
+            right: inherit;
+            padding: 8px 16px;
+    
+            .fa {
+                margin: 0;
+                vertical-align: inherit;
+            }
+        }
+
+        .callusbtn,.wsanimated-arrow {
+            position: relative;
+        }
+    
+        .wsanimated-arrow {
+            padding: 24px;
+            margin: 0;
+        }
+    }
+    
+    .wsanimated-arrow span, 
+    .wsanimated-arrow span::before, 
+    .wsanimated-arrow span::after {
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+
+//---------------------------------------------------------
+// Desktop
+
 .wsmainfull {
     box-shadow: $box-shadow;
+}
+
+.wsmainfull {
+    box-shadow: $box-shadow;
+}
+
+.wsmainwp, 
+.wsmenu,
+.wsmenu > .wsmenu-list {
+    height: 100%;
+}
+
+.wsmainwp {
+    max-width: 1350px;
+}
+
+.wsmainfull {
+    background-color: $gray-500;
+
+    a {
+        color: $white;
+    }
+}
+
+.wsmenu {
+    width: 100%;
+    font-family: $font-body;
+
+    > .wsmenu-list {
+
+        > li {
+            @include media-breakpoint-up(lg){
+                transition: 0.4s;
+            }
+
+            &:hover {
+                background-color: $secondary;
+            }
+
+            &.logo-scroll {
+                width: 0px;
+                opacity: 0;
+                margin-left: -6%;
+                transition: 0.5s;
+
+                img {
+                    width: 2rem;
+                }
+            }
+
+            > a {
+                font-family: $font-heading;
+                text-transform: uppercase;
+                font-size: 1rem;
+                line-height: 1;
+                align-items: center;
+                width: 100%;
+                justify-content: center;
+            }
+
+            > a .wsarrow:after {
+                position: relative;
+                top: inherit;
+                right: inherit;
+            }
+
+            @include media-breakpoint-down(xl){
+                // &.logo-scroll{
+                //     margin-left: -6%;
+                // }
+            }
+            
+            @include media-breakpoint-down(lg){
+                // &.logo-scroll {
+                //     margin-left: -56px;
+                //     margin-left: -6%;
+                // }
+
+                a {font-size: 0.85rem;}
+            }
+            @include media-breakpoint-down(md){
+                &.logo-scroll {
+                    display: none;
+                }
+            }
+        }
+
+        @include media-breakpoint-up(lg){
+            display: flex;
+            justify-content: space-between;
+            
+            > li {
+                flex-grow: 1;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+    
+                > a {
+                    padding: 0;
+                    display: flex;
+                }
+            }
+        }
+        
+    }
+}
+
+.is_stuck .wsmenu > .wsmenu-list > li {
+    &.logo-scroll {
+        display: flex;
+        // width: 10px;
+        opacity: 1;
+        margin-left: 0;
+        padding: 0 1rem;
+    }
 }

@@ -2,8 +2,8 @@
 @import "../../../node_modules/bootstrap/scss/functions";
 // Base
 @import "base/base";
-@import "base/color";
-@import "base/typography";
+// @import "base/color";
+// @import "base/typography";
 
 //BS4 Required
 @import "../../../node_modules/bootstrap/scss/variables";
@@ -32,8 +32,8 @@
 //Vendor
 @import "vendor/dropdown-effects/fade-down";
 @import "vendor/webslidemenu";
-@import "../../../node_modules/slick-carousel/slick/sass/slick-theme";
-@import "../../../node_modules/slick-carousel/slick/sass/slick";
+// @import "../../../node_modules/slick-carousel/slick/sass/slick-theme";
+// @import "../../../node_modules/slick-carousel/slick/sass/slick";
 
 //Components
 @import "components/header";
