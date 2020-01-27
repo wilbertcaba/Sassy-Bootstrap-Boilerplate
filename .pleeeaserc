@@ -1,0 +1,17 @@
+{
+    "in":["dist/assets/styles/app.scss"],
+    "out": "dist/assets/styles/app.min.css",
+    "browsers": ["last 3 versions", "Android 2.3"],
+    "sass": true,
+
+    "autoprefixer": true,
+    "filters": true,
+    "rem": false,
+    "pseudoElements": true,
+    "opacity": true,
+
+    "import": false,
+    "minifier": true,
+    "mqpacker": false,
+    "sourcemaps": true
+}
